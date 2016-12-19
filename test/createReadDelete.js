@@ -2,9 +2,9 @@ var assert = require('assert');
 var request = require('request');
 var fs = require('fs');
 
-describe('Create, List, Delete', function() {
+describe('Create, Read, Delete', function() {
 	this.timeout(5000);
-    it('should create a new Todo, list it, & delete it', function(done) {
+    it('should create a new Todo, read it, & delete it', function(done) {
 		// Build and log the path
 		var path = "https://" + process.env.TODOS_ENDPOINT + "/dev/todos";
 
@@ -21,19 +21,19 @@ describe('Create, List, Delete', function() {
 				throw new Error("Create call failed: " + err);
 			}
 			assert.equal(200, res.statusCode, "Create Status Code != 200 (" + res.statusCode + ")");
-			
-			// Read the list, see if the new item is there at the end
+			var todo = JSON.parse(res.body);
+			// Read the item
+			var specificPath = path + "/" + todo.id;
 			request.get(path, function (err, res, body){ 
 				if(err){
-					throw new Error("List call failed: " + err);
+					throw new Error("Read call failed: " + err);
 				}
-				assert.equal(200, res.statusCode, "List Status Code != 200 (" + res.statusCode + ")");
+				assert.equal(200, res.statusCode, "Read Status Code != 200 (" + res.statusCode + ")");
 				
 				var todoList = JSON.parse(res.body);
-				if(todoList[todoList.length-1].text = desiredPayload.text)	{
+				if(todoList.text = desiredPayload.text)	{
 					// Item found, delete it
-					var deletePath = path + "/" + todoList[todoList.length-1].id;
-		 			request.del(deletePath, function (err, res, body){ 
+		 			request.del(specificPath, function (err, res, body){ 
 						if(err){
 							throw new Error("Delete call failed: " + err);
 						}
