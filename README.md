@@ -3,7 +3,7 @@
 This project riffs off of the [Serverless Framework Todo example](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb), which demonstrates how to to create, list, get, update and delete Todos. DynamoDB is used to store the data.
 
 ## What's Different?
-This repo extends the Serverless Framework example by adding:
+This project extends the Serverless Framework example by adding:
 
 * [Mocha](https://mochajs.org/) tests (current iteration)
 * CI/CD using [AWS CodePipeline](https://aws.amazon.com/codepipeline/) (future)
