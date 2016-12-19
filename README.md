@@ -1,6 +1,6 @@
 # Extending a Serverless REST API example
 
-This repo riffs off of the [Serverless Framework ToDo example](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb), which demonstrates how to to create, list, get, update and delete Todos. DynamoDB is used to store the data.
+This project riffs off of the [Serverless Framework Todo example](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb), which demonstrates how to to create, list, get, update and delete Todos. DynamoDB is used to store the data.
 
 ## What's Different?
 This repo extends the Serverless Framework example by adding:
