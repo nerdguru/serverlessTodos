@@ -80,11 +80,20 @@ The results should be similar to:
 
 
 
+  Create, Delete
+    ✓ should create a new Todo, & delete it (1938ms)
+
+  Create, List, Delete
+    ✓ should create a new Todo, list it, & delete it (2859ms)
+
   Create, Read, Delete
-    ✓ should create a new ToDo, read it, & delete it (1756ms)
+    ✓ should create a new Todo, read it, & delete it (2663ms)
+
+  Create, Update, Delete
+    ✓ should create a new Todo, update it, verify the update, & delete it (2559ms)
 
 
-  1 passing (2s)
+  4 passing (10s)
 
 ```
 

@@ -37,7 +37,9 @@ module.exports.update = (event, context, callback) => {
     // create a resonse
     const response = {
       statusCode: 200,
-      body: JSON.stringify(result.Item),
+      	// PCJ: Minor change from original, return full item inserted instead of empty result
+		// body: JSON.stringify(result.Item),
+		body: JSON.stringify(params.Item),
     };
     callback(null, response);
   });
