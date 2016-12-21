@@ -5,8 +5,8 @@ This project riffs off of the [Serverless Framework Todo example](https://github
 ## What's Different?
 This project extends the Serverless Framework example by adding:
 
-* [Mocha](https://mochajs.org/) tests (current iteration)
-* CI/CD using [AWS CodePipeline](https://aws.amazon.com/codepipeline/) (future)
+* [Mocha](https://mochajs.org/) tests (completed with [0.5.0](https://github.com/nerdguru/serverlessTodos/releases/tag/0.5.0))
+* CI/CD using [AWS CodePipeline](https://aws.amazon.com/codepipeline/) (iss4 branch)
 * Anonymous [Bootstrap](http://getbootstrap.com/)-based web/mobile UI (future)
 * Authenticated (with [AWS Cognito](https://aws.amazon.com/cognito/)) [Bootstrap](http://getbootstrap.com/)-based web/mobile UI (future)
 
