@@ -3,4 +3,4 @@ phases:
   install:
     commands:
       - npm install
-      - release --version
+      - mocha --version
