@@ -1,3 +1,4 @@
 .DS_STORE
 .serverless/
 node_modules/
+deploy.out
