@@ -5,7 +5,7 @@ phases:
       - npm install
       - npm install -g mocha
       - npm install -g serverless
-      - serverless deploy --verbose | tee deploy.out
+      - serverless deploy | tee deploy.out
       - cat deploy.out
       - . endpoint.sh
       - npm test
