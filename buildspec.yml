@@ -8,6 +8,4 @@ phases:
   build:
     commands:
       - serverless deploy | tee deploy.out 
-  post_build:
-    commands:
       - . ./test.sh
