@@ -7,7 +7,7 @@ phases:
       - npm install -g serverless
   build:
     commands:
-      - serverless deploy | tee deploy.outgit 
+      - serverless deploy | tee deploy.out 
   post_build:
     commands:
       - . ./test.sh
