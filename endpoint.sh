@@ -3,3 +3,4 @@ value=`cat endpoint.out`
 echo $value
 export TODOS_ENDPOINT=$value
 echo $TODOS_ENDPOINT
+npm test

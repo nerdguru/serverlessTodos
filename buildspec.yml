@@ -7,4 +7,3 @@ phases:
       - npm install -g serverless
       - serverless deploy | tee deploy.out
       - . ./endpoint.sh
-      - npm test

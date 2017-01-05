@@ -13,11 +13,11 @@ describe('Create, Update, Delete', function() {
 		    module.exports = fs.readFileSync(filename, 'utf8');
 		};
 		var desiredPayload = require("./data/newTodo1.json");
-		var testEndpoint = require("./endpoint.out");
+
 		// Create the new todo
 		console.log("Trying path: " + path + "\n");
 		console.log("With payload: " + JSON.stringify(desiredPayload) + "\n");
-		console.log("endpoint.out: " + testEndpoint + "\n");
+
 		var options = {'url' : path, 'form': JSON.stringify(desiredPayload)};
  		request.post(options, function (err, res, body){ 
 			if(err){
