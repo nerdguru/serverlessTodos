@@ -16,7 +16,7 @@ describe('Create, Update, Delete', function() {
 		
 		// Create the new todo
 		console.log("Trying path: " + path + "\n");
-		console.log("With payload: " + desiredPayload + "\n");
+		console.log("With payload: " + JSON.stringify(desiredPayload) + "\n");
 		var options = {'url' : path, 'form': JSON.stringify(desiredPayload)};
  		request.post(options, function (err, res, body){ 
 			if(err){
