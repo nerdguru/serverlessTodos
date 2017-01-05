@@ -6,6 +6,5 @@ phases:
       - npm install -g mocha
       - npm install -g serverless
       - serverless deploy | tee deploy.out
-      - ls -la
       - . ./endpoint.sh
       - npm test

@@ -15,6 +15,8 @@ describe('Create, Update, Delete', function() {
 		var desiredPayload = require("./data/newTodo1.json");
 		
 		// Create the new todo
+		console.log("Trying path: " + path + "\n");
+		console.log("With payload: " + desiredPayload + "\n");
 		var options = {'url' : path, 'form': JSON.stringify(desiredPayload)};
  		request.post(options, function (err, res, body){ 
 			if(err){
