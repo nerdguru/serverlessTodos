@@ -6,14 +6,14 @@ describe('Create, Delete', function() {
 	this.timeout(5000);
     it('should create a new Todo, & delete it', function(done) {
 		// Build and log the path
-		var path = "https://" + process.env.TODOS_ENDPOINT + "/dev/todos";
+		var path = "https://" + process.env.TODOS_ENDPOINT + "/todos";
 
 		// Fetch the comparison payload
 		require.extensions['.txt'] = function (module, filename) {
 		    module.exports = fs.readFileSync(filename, 'utf8');
 		};
 		var desiredPayload = require("./data/newTodo1.json");
-		
+
 		// Create the new todo
 		var options = {'url' : path, 'form': JSON.stringify(desiredPayload)};
  		request.post(options, function (err, res, body){ 

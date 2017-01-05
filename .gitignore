@@ -2,3 +2,4 @@
 .serverless/
 node_modules/
 deploy.out
+endpoint.out
