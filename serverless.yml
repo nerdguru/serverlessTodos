@@ -1,4 +1,4 @@
-service: serverless-todo
+service: serverless-todo-v2
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
