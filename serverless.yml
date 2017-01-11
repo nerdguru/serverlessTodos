@@ -1,4 +1,4 @@
-service: serverless-rest-api-with-dynamodb
+service: serverless-todo-cicd
 
 frameworkVersion: ">=1.1.0 <2.0.0"
 
@@ -15,7 +15,7 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      Resource: "arn:aws:dynamodb:us-east-1:*:*"
+      Resource: "arn:aws:dynamodb:*:*:*"
 
 functions:
   create:
@@ -75,4 +75,4 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-        TableName: 'todos'
+        TableName: 'todos-${opt:stage, self:provider.stage}'

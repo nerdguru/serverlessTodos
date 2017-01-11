@@ -1,0 +1,13 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - npm install
+      - npm install -g mocha
+      - npm install -g serverless
+  build:
+    commands:
+      - serverless deploy --stage cicd | tee deploy.out 
+  post_build:
+    commands:
+      - . ./test.sh
