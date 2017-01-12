@@ -2,6 +2,13 @@
 
 This page describes how to utilize the additional Mocha tests locally.
 
+## Clone
+First, clone this repo:
+
+```bash
+git clone https://github.com/nerdguru/serverlessTodos.git
+```
+
 ## Deploy
 
 Like in the example it is based on, in order to deploy your endpoint simply run

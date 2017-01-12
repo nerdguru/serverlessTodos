@@ -1,0 +1,44 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1483564261000",
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetRole",
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:PassRole",
+                "s3:CreateBucket",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "cloudformation:CreateStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:DescribeStackResource",
+                "cloudformation:DescribeStackResources",
+                "cloudformation:CreateUploadBucket",
+                "cloudformation:UpdateStack",
+                "dynamodb:CreateTable",
+                "dynamodb:DescribeTable",
+                "lambda:CreateFunction",
+                "lambda:GetFunctionConfiguration",
+                "lambda:ListVersionsByFunction",
+                "lambda:PublishVersion",
+                "lambda:UpdateFunctionCode",
+                "lambda:GetFunction",
+                "lambda:AddPermission",
+                "execute-api:Invoke",
+                "apigateway:DELETE",
+                "apigateway:PUT",
+                "apigateway:POST",
+                "apigateway:GET"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
