@@ -55,10 +55,10 @@ You can create, retrieve, update, or delete todos with the same `curl` commands 
 Before you can run tests, you need to set the `TODOS_ENDPOINT` environment variable to the value of the domain name returned when you deployed your service.  Using values from the example above:
 
 ```bash
-export TODOS_ENDPOINT=45wf34z5yf.execute-api.us-east-1.amazonaws.com
+export TODOS_ENDPOINT=45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev
 ```
 
-or you can execute the provided `endpoint.sh` which utilizes that `deploy.out` from before.
+or you can execute the provided `test.sh` which utilizes that `deploy.out` from before.
 
 Now to run the tests:
 
