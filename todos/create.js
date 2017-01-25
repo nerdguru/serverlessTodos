@@ -15,7 +15,8 @@ module.exports.create = (event, context, callback) => {
   }
 
   const params = {
-    TableName: 'todos',
+	// PCJ: Minor change from original, use environment variable for stage sensitive table name
+    TableName: process.env.TABLE_NAME,
     Item: {
       id: uuid.v1(),
       text: data.text,

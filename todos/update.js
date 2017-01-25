@@ -16,7 +16,8 @@ module.exports.update = (event, context, callback) => {
   }
 
   const params = {
-    TableName: 'todos',
+	// PCJ: Minor change from original, use environment variable for stage sensitive table name
+    TableName: process.env.TABLE_NAME,
     Item: {
       id: event.pathParameters.id,
       text: data.text,

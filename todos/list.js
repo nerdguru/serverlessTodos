@@ -4,7 +4,8 @@ const AWS = require('aws-sdk');
 
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 const params = {
-  TableName: 'todos',
+  // PCJ: Minor change from original, use environment variable for stage sensitive table name
+  TableName: process.env.TABLE_NAME,
 };
 
 module.exports.list = (event, context, callback) => {
