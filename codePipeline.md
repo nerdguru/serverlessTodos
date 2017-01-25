@@ -99,4 +99,7 @@ In the CodeBuild stage, if you click on the "Details" link, a new browser tab wi
 
 ![CodeBuild Details](/img/codeBuildDetails.jpg)
 
+## Troubleshooting
+If things go badly, you don't have access to the serverless command line to help you remove your CloudFormation stack the way you do locally, so if you run into issues you can start with a clean slate by going to the CloudFormation console and manually deleting the stack.  Be patient with that, though, as often there are things running in the background with those CloudFormation stacks that aren't obvious.  Once the stack is deleted, check to see if it took care of the DynamoDB table as well, which should be named 'todo-cicd'.  If that isn't deleted and you try again, the stack deployment will fail, citing a table name that already exists.
+
 
