@@ -2,5 +2,4 @@
 .build
 .serverless
 node_modules
-deploy.out
-endpoint.out
+npm-debug.log
