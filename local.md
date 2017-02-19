@@ -6,7 +6,7 @@ This page describes how to utilize the additional Mocha tests locally.
 First, clone this repo:
 
 ```bash
-git clone https://github.com/nerdguru/serverlessTodos.git
+$ > git clone https://github.com/nerdguru/serverlessTodos.git
 ```
 
 ## Deploy
@@ -14,7 +14,7 @@ git clone https://github.com/nerdguru/serverlessTodos.git
 Like in the example it is based on, in order to deploy your endpoint simply run the `deploy` npm task.
 
 ```bash
-npm run deploy # task runs 'serverless deploy | tee deploy.out'
+$ > npm run deploy # task runs 'serverless deploy | tee deploy.out'
 ```
 
 The pipe to `tee` will enable easier setting of an environment variable later and the expected result should be similar to:
@@ -55,7 +55,7 @@ You can create, retrieve, update, or delete todos with the same `curl` commands 
 Before you can run tests, you need to set the `TODOS_ENDPOINT` environment variable to the value of the domain name returned when you deployed your service.  Using values from the example above:
 
 ```bash
-export TODOS_ENDPOINT=45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev
+$ > export TODOS_ENDPOINT=45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev
 ```
 
 or you can execute the provided `test.sh` which utilizes that `deploy.out` from before.
@@ -63,26 +63,24 @@ or you can execute the provided `test.sh` which utilizes that `deploy.out` from 
 Now to run the tests:
 
 ```bash
-npm test
+$ > npm test
 ```
 
 The results should be similar to:
 
 ```bash
-> ./node_modules/.bin/mocha
+Create, Delete
+  ✓ should create a new Todo, & delete it (1938ms)
 
-  Create, Delete
-    ✓ should create a new Todo, & delete it (1938ms)
+Create, List, Delete
+  ✓ should create a new Todo, list it, & delete it (2859ms)
 
-  Create, List, Delete
-    ✓ should create a new Todo, list it, & delete it (2859ms)
+Create, Read, Delete
+  ✓ should create a new Todo, read it, & delete it (2663ms)
 
-  Create, Read, Delete
-    ✓ should create a new Todo, read it, & delete it (2663ms)
-
-  Create, Update, Delete
-    ✓ should create a new Todo, update it, verify the update, & delete it (2559ms)
+Create, Update, Delete
+  ✓ should create a new Todo, update it, verify the update, & delete it (2559ms)
 
 
-  4 passing (10s)
+4 passing (10s)
 ```
