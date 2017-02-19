@@ -13,6 +13,7 @@
     "test": "./node_modules/.bin/mocha"
   },
   "devDependencies": {
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "serverless": "^1.7.0"
   }
 }
