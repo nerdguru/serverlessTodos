@@ -69,10 +69,7 @@ npm test
 The results should be similar to:
 
 ```bash
-> aws-rest-with-dynamodb@1.0.0 test /Users/petercjo/serverlessTodos
-> mocha
-
-
+> ./node_modules/.bin/mocha
 
   Create, Delete
     ✓ should create a new Todo, & delete it (1938ms)
@@ -88,7 +85,4 @@ The results should be similar to:
 
 
   4 passing (10s)
-
 ```
-
-
