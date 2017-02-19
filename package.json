@@ -29,10 +29,10 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "test:remote": ". ./helpers/endpoint.sh; npm test",
+    "test:remote": "mkdir -p .build; . ./helpers/endpoint.sh; npm run test",
     "clean": "rm -rf node_modules && rm -rf src/node_modules",
     "deploy": "./node_modules/.bin/serverless deploy | tee .build/deploy.out",
-    "deploy:cicd": "./node_modules/.bin/serverless deploy --stage cicd | tee deploy.out",
+    "deploy:cicd": "./node_modules/.bin/serverless deploy --stage cicd | tee .build/deploy.out",
     "predeploy": "mkdir -p .build",
     "predeploy:cicd": "npm run predeploy",
     "postinstall": "cd src && npm install && cd .."
