@@ -37,7 +37,8 @@
                 "apigateway:POST",
                 "apigateway:GET",
                 "logs:DescribeLogGroups",
-                "logs:CreateLogGroup"
+                "logs:CreateLogGroup",
+                "logs:DeleteLogGroup"
             ],
             "Resource": [
                 "*"
