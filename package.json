@@ -10,7 +10,8 @@
     "request": "^2.79.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "deploy": "./node_modules/.bin/serverless deploy | tee deploy.out"
   },
   "devDependencies": {
     "mocha": "^3.2.0",
