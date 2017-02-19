@@ -8,4 +8,4 @@ phases:
       - npm run deploy:cicd
   post_build:
     commands:
-      - . ./test.sh
+      - npm run test:remote
