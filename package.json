@@ -2,7 +2,24 @@
   "name": "aws-rest-with-dynamodb",
   "version": "1.0.0",
   "description": "Serverless CRUD service exposing a REST HTTP interface",
-  "author": "",
+  "keywords": [
+    "aws",
+    "codebuild",
+    "pipeline",
+    "serverless",
+    "todo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nerdguru/serverlessTodos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nerdguru/serverlessTodos/issues"
+  },
+  "author": "Pete Johnson <petecj2@gmail.com>",
+  "contributors": [
+    "Sebastian Müller <mail@sbstjn.com> (https://sbstjn.com)"
+  ],
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.6.7",
