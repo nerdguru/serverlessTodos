@@ -29,7 +29,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "test:remote": "source helpers/endpoint.sh && npm test",
+    "test:remote": ". ./helpers/endpoint.sh; npm test",
     "clean": "rm -rf node_modules && rm -rf src/node_modules",
     "deploy": "./node_modules/.bin/serverless deploy | tee .build/deploy.out",
     "deploy:cicd": "./node_modules/.bin/serverless deploy --stage cicd | tee deploy.out",
