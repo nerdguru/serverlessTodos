@@ -1,4 +1,5 @@
 .DS_STORE
+.build
 .serverless
 node_modules
 deploy.out
