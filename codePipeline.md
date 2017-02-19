@@ -41,7 +41,7 @@ In Step 4, select "No deployment" for the "Deployment provider":
 ### Step 5
 In our example, we're using CodePipeline together with CodeBuild [AWS CodeBuild](https://aws.amazon.com/codebuild/), which will create a container, insert the source from the repo, and execute commands found in the buildspec.yml file.  In our case, those commands are:
 
-```bash
+```yaml
 version: 0.1
 phases:
   install:
@@ -49,10 +49,10 @@ phases:
       - npm install
   build:
     commands:
-      - ./node_modules/.bin/serverless deploy --stage cicd | tee deploy.out 
+      - ./node_modules/.bin/serverless deploy --stage cicd | tee deploy.out
   post_build:
     commands:
-      - . ./test.sh
+      - ./test.sh
 ```
 
 In other words, during the Install phase, our buildspec.yml file will use npm to install the dependencies we need.  During the Build phase, it will use the serverless command line to build and deploy the service, and during the Post-Build phase it will use the test.sh script to launch the tests.
