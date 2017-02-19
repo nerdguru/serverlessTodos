@@ -3,6 +3,7 @@
 This page describes how to utilize the additional Mocha tests locally.
 
 ## Clone
+
 First, clone this repo:
 
 ```bash
@@ -52,21 +53,15 @@ functions:
 You can create, retrieve, update, or delete todos with the same `curl` commands as the [Serverless Framework ToDo example](https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb).
 
 ## Run Tests
-Before you can run tests, you need to set the `TODOS_ENDPOINT` environment variable to the value of the domain name returned when you deployed your service.  Using values from the example above:
+
+Before you can run tests, you need to set the `TODOS_ENDPOINT` environment variable to the value of the domain name returned when you deployed your service. Using values from the example above:
 
 ```bash
 $ > export TODOS_ENDPOINT=45wf34z5yf.execute-api.us-east-1.amazonaws.com/dev
-```
-
-or you can execute the provided `test.sh` which utilizes that `deploy.out` from before.
-
-Now to run the tests:
-
-```bash
 $ > npm test
 ```
 
-The results should be similar to:
+Or run `npm run test:remote` to do this automatically. The results are the same, and should look similar to:
 
 ```bash
 Create, Delete
