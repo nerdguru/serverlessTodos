@@ -3,6 +3,7 @@ phases:
   install:
     commands:
       - npm install
+      - npm run install:lambda
   build:
     commands:
       - npm run deploy:cicd
