@@ -11,10 +11,10 @@ git clone https://github.com/nerdguru/serverlessTodos.git
 
 ## Deploy
 
-Like in the example it is based on, in order to deploy your endpoint simply run
+Like in the example it is based on, in order to deploy your endpoint simply run the `deploy` npm task.
 
 ```bash
-serverless deploy | tee deploy.out
+npm run deploy # task runs 'serverless deploy | tee deploy.out'
 ```
 
 The pipe to `tee` will enable easier setting of an environment variable later and the expected result should be similar to:
