@@ -21,13 +21,11 @@ provider:
 
 package:
   exclude:
-    - node_modules/serverless/**
-    - node_modules/mocha/**
-    - node_modules/lodash.create/**
+    - node_modules/**
 
 functions:
   create:
-    handler: todos/create.create
+    handler: src/todos/create.create
     events:
       - http:
           path: todos
@@ -35,7 +33,7 @@ functions:
           cors: true
 
   list:
-    handler: todos/list.list
+    handler: src/todos/list.list
     events:
       - http:
           path: todos
@@ -43,7 +41,7 @@ functions:
           cors: true
 
   get:
-    handler: todos/get.get
+    handler: src/todos/get.get
     events:
       - http:
           path: todos/{id}
@@ -51,7 +49,7 @@ functions:
           cors: true
 
   update:
-    handler: todos/update.update
+    handler: src/todos/update.update
     events:
       - http:
           path: todos/{id}
@@ -59,7 +57,7 @@ functions:
           cors: true
 
   delete:
-    handler: todos/delete.delete
+    handler: src/todos/delete.delete
     events:
       - http:
           path: todos/{id}
