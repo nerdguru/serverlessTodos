@@ -7,6 +7,7 @@
             "Action": [
                 "iam:GetRole",
                 "iam:CreateRole",
+                "iam:DeleteRole",
                 "iam:PutRolePolicy",
                 "iam:PassRole",
                 "s3:CreateBucket",
@@ -34,7 +35,10 @@
                 "apigateway:DELETE",
                 "apigateway:PUT",
                 "apigateway:POST",
-                "apigateway:GET"
+                "apigateway:GET",
+                "logs:DescribeLogGroups",
+                "logs:CreateLogGroup",
+                "logs:DeleteLogGroup"
             ],
             "Resource": [
                 "*"

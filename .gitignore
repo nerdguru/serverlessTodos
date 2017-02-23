@@ -1,5 +1,5 @@
 .DS_STORE
-.serverless/
-node_modules/
-deploy.out
-endpoint.out
+.build
+.serverless
+node_modules
+npm-debug.log

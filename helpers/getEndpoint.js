@@ -1,8 +1,8 @@
 fs = require('fs')
-fs.readFile('./deploy.out', 'utf8', function (err,data) {
-  if (err) 
+fs.readFile(__dirname + '/../.build/deploy.out', 'utf8', function (err,data) {
+  if (err)
     throw (err);
-  
+
   var lines = data.split("\n");
   for (var i = 0; lines.length > i; i++) {
     if(lines[i].indexOf("POST") > -1) {
@@ -11,5 +11,5 @@ fs.readFile('./deploy.out', 'utf8', function (err,data) {
 	  console.log(lines[i].substring(startIndex, endIndex));
 	  i = lines.length;
     }
-  }	
+  }
 });

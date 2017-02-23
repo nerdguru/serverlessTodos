@@ -41,20 +41,18 @@ In Step 4, select "No deployment" for the "Deployment provider":
 ### Step 5
 In our example, we're using CodePipeline together with CodeBuild [AWS CodeBuild](https://aws.amazon.com/codebuild/), which will create a container, insert the source from the repo, and execute commands found in the buildspec.yml file.  In our case, those commands are:
 
-```bash
+```yaml
 version: 0.1
 phases:
   install:
     commands:
       - npm install
-      - npm install -g mocha
-      - npm install -g serverless
   build:
     commands:
-      - serverless deploy --stage cicd | tee deploy.out 
+      - ./node_modules/.bin/serverless deploy --stage cicd | tee deploy.out
   post_build:
     commands:
-      - . ./test.sh
+      - ./test.sh
 ```
 
 In other words, during the Install phase, our buildspec.yml file will use npm to install the dependencies we need.  During the Build phase, it will use the serverless command line to build and deploy the service, and during the Post-Build phase it will use the test.sh script to launch the tests.
@@ -101,5 +99,3 @@ In the CodeBuild stage, if you click on the "Details" link, a new browser tab wi
 
 ## Troubleshooting
 If things go badly, you don't have access to the serverless command line to help you remove your CloudFormation stack the way you do locally, so if you run into issues you can start with a clean slate by going to the CloudFormation console and manually deleting the stack.  Be patient with that, though, as often there are things running in the background with those CloudFormation stacks that aren't obvious.  Once the stack is deleted, check to see if it took care of the DynamoDB table as well, which should be named 'todo-cicd'.  If that isn't deleted and you try again, the stack deployment will fail, citing a table name that already exists.
-
-
